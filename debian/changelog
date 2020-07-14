@@ -1,3 +1,9 @@
+rtl-sdr (0.6.4) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Andrey Rodionov <info@r2cloud.ru>  Sat, 14 Jul 2020 10:28:26 -0000
+
 rtl-sdr (0.6) unstable; urgency=medium
 
   * New upstream release
