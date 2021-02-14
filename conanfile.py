@@ -1,8 +1,8 @@
 from conans import ConanFile, CMake
 
 
-class LibrtlsdrConan(ConanFile):
-    name = "librtlsdr"
+class RtlsdrConan(ConanFile):
+    name = "rtlsdr"
     version = "0.6.4"
     license = "GPLv2"
     author = "Steve Markgraf <steve@steve-m.de>"
@@ -34,4 +34,4 @@ class LibrtlsdrConan(ConanFile):
         # self.run("cmake --build . %s" % cmake.build_config)
 
     def package_info(self):
-        self.cpp_info.libs = ["librtlsdr"]
+        self.cpp_info.libs = ["rtlsdr"]
