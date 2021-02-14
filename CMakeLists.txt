@@ -28,6 +28,9 @@ else()
     project(rtlsdr C)
 endif()
 
+#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+#conan_basic_setup()
+
 #select the release build type by default to get optimization flags
 if(NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE "Release")
@@ -41,10 +44,12 @@ include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
 
 # Set the version information here
-set(VERSION_INFO_MAJOR_VERSION 0) # increment major on api compatibility changes
-set(VERSION_INFO_MINOR_VERSION 6) # increment minor on feature-level changes
-set(VERSION_INFO_PATCH_VERSION git) # increment patch for bug fixes and docs
-include(Version) # setup version info
+if(NOT DEFINED VERSION)
+	set(VERSION_INFO_MAJOR_VERSION 0) # increment major on api compatibility changes
+	set(VERSION_INFO_MINOR_VERSION 6) # increment minor on feature-level changes
+	set(VERSION_INFO_PATCH_VERSION git) # increment patch for bug fixes and docs
+	include(Version) # setup version info
+endif(NOT DEFINED VERSION)
 
 ########################################################################
 # Compiler specific setup
