@@ -44,12 +44,16 @@ include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
 
 # Set the version information here
-if(NOT DEFINED VERSION)
+if(DEFINED VERSION)
+	string(REGEX MATCH "^[0-9]+\.[0-9]+" MAJOR_VERSION ${VERSION})
+	string(APPEND MAJOR_VERSION ".0")
+	set(LIBVER ${VERSION})
+else()
 	set(VERSION_INFO_MAJOR_VERSION 0) # increment major on api compatibility changes
 	set(VERSION_INFO_MINOR_VERSION 6) # increment minor on feature-level changes
 	set(VERSION_INFO_PATCH_VERSION git) # increment patch for bug fixes and docs
 	include(Version) # setup version info
-endif(NOT DEFINED VERSION)
+endif()
 
 ########################################################################
 # Compiler specific setup
