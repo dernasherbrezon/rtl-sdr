@@ -1,3 +1,9 @@
+rtl-sdr (0.6.5) unstable; urgency=medium
+
+  * Change soname
+
+ -- Andrey Rodionov <info@r2cloud.ru>  Sun, 21 Feb 2021 10:28:26 -0000
+
 rtl-sdr (0.6.4) unstable; urgency=medium
 
   * New upstream release
