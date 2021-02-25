@@ -9,7 +9,7 @@ Build-Depends: cmake,
                libusb2-dev [kfreebsd-any],
 	       pkg-config
 Standards-Version: 4.1.4
-Homepage: http://sdr.osmocom.org/trac/wiki/rtl-sdr
+Homepage: https://github.com/dernasherbrezon/rtl-sdr
 Vcs-Browser: https://salsa.debian.org/bottoms/pkg-rtl-sdr
 Vcs-Git: https://salsa.debian.org/bottoms/pkg-rtl-sdr.git
 
