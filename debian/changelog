@@ -1,3 +1,9 @@
+rtl-sdr (0.6.5-1~buster) unstable; urgency=medium
+
+  * build for buster
+
+ -- Andrey Rodionov <info@r2cloud.ru>  Sat, 06 Mar 2021 10:28:26 -0000
+
 rtl-sdr (0.6.5) unstable; urgency=medium
 
   * Change soname
